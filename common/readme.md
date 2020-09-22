@@ -61,3 +61,15 @@ services:
 volumes:
   postgres_data:
 ```
+
+## hoppscotch - API interactive/ API document
+https://github.com/hoppscotch/hoppscotch
+docker run -d --name postwoman --restart=always  -p 9001:3000 postwoman:latest
+
+
+# install docker by one command
+# 1. create volumes
+
+docker volume create mysql8_data
+# then
+docker run -d --name mysql8 --restart=always -e MYSQL_USER=bn_wordpress -e  MYSQL_PASSWORD=44b0294923  -e MYSQL_ROOT_PASSWORD=password -v mysql8_data:/var/lib/mysql -p 3307:3306 mysql:8.0.21 --default_authentication_plugin=mysql_native_password
